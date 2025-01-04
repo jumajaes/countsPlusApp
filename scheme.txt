@@ -16,15 +16,48 @@ flask==2.0.3
 flask_sqlalchemy==2.5.1
 psycopg2-binary==2.9.3
 
-tambien se podria manualmente y solo las dos primeras
+tambien se podria manualmente y solo las dos primeras (si es necesario las demas)
 
 pip install flask
 pip install flask_sqlalchemy
 
 ----------------------------------- init services project
+docker-compose up -d
+(si quiero ingresar manualmete a la bd de pg en docker) docker exec -it postgres_db psql -U postgres -d db
+
 source venv/bin/activate
 python run.py
 
 ---------------------------------- stop services project
 
 deactivate
+
+docker-compose down
+
+---------------------------------------- docker options 
+
+sudo service docker ({start|stop|restart|status})
+
+--------------------------------------- errors init project --- issues resolve
+*** bash
+El error 'ulimit: error setting limit (Invalid argument)'
+
+ Editar el Archivo `/etc/init.d/docker`
+
+sudo nano /etc/init.d/docker
+
+
+ Modificar el Comando `ulimit`
+Busca la línea que contiene `ulimit -Hn 524288` y cámbiala a `ulimit -n 524288`. Debería verse algo así:
+ulimit -n 524288
+
+ Guardar y Cerrar el Archivo
+
+ Reiniciar Docker
+sudo service docker restart
+
+
+ Verificar el Estado del Servicio
+ 
+sudo service docker status
+
