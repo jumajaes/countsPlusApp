@@ -20,9 +20,7 @@
 - **SQLAlchemy Documentation**: [SQLAlchemy Documentation](https://docs.sqlalchemy.org/)
 - **cryptography Documentation**: [cryptography Documentation](https://cryptography.io/en/latest/)
 - **JWT Documentation**: [JWT Documentation](https://jwt.io/)
-- 
 🚀
-
 ### Resumen del Stack Tecnológico
 - **Backend**: Flask
 - **Frontend Móvil**: BeeWare
