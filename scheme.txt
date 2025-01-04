@@ -1,0 +1,30 @@
+countsPlusApp/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   └── models.py
+├── requirements.txt
+├── .gitignore
+├── README.md
+└── run.py
+
+..........................
+----- requirements.txt
+
+flask==2.0.3
+flask_sqlalchemy==2.5.1
+psycopg2-binary==2.9.3
+
+tambien se podria manualmente y solo las dos primeras
+
+pip install flask
+pip install flask_sqlalchemy
+
+----------------------------------- init services project
+source venv/bin/activate
+python run.py
+
+---------------------------------- stop services project
+
+deactivate
